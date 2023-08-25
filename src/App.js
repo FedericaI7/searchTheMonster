@@ -4,7 +4,7 @@ import Header from "./Header";
 export default function App() {
   return (
     <div className="container--app">
-      <Header title={"Search the monster"} />
+      <Header title={"Search the monster"} placeholder={"Search the monster"} />
     </div>
   );
 }
