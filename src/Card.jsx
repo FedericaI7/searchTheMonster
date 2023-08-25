@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 export default function Card(props) {
   return (
@@ -8,7 +9,7 @@ export default function Card(props) {
           <h1>{card.name}</h1>
 
           <img
-            src={`https://robohash.org/${card.id}?size=180x180`}
+            src={`https://robohash.org/${card.id}?set=set2&size=180x180`}
             alt="monster illustration"
           />
           <p>{card.email}</p>
