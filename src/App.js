@@ -1,8 +1,10 @@
 import React from "react";
+import Header from "./Header";
+
 export default function App() {
   return (
     <div className="container--app">
-      <h1>start</h1>
+      <Header title={"Search the monster"} />
     </div>
   );
 }
