@@ -4,7 +4,7 @@ import "./Card.css";
 export default function Card(props) {
   return (
     <div className="container--card">
-      {props.stateMonster.map((card) => (
+      {props.monsterFiltered.map((card) => (
         <div className="card" key={card.id}>
           <h1>{card.name}</h1>
 

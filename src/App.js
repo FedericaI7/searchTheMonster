@@ -16,7 +16,7 @@ export default function App() {
   }, []);
 
   const changeValue = (event) => {
-    const valueOnInput = inputValue.event.value.toLowerCase();
+    const valueOnInput = event.target.value.toLowerCase();
     setInputValue(valueOnInput);
   };
 
@@ -35,7 +35,7 @@ export default function App() {
         placeholder={"Search the monster"}
         changeValue={changeValue}
       />
-      <Card stateMonster={monster} />
+      <Card stateMonster={monster} monsterFiltered={monsterFiltered} />
     </div>
   );
 }
