@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+## Project README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Monster Search App
 
-## Available Scripts
+This project is a React application that allows users to search and filter through a list of monster data fetched from an API. The application consists of two main components: **Header** and **Card**, and it utilizes React's state management and `useEffect` hook for fetching and filtering data.
 
-In the project directory, you can run:
+#### Features
 
-### `npm start`
+- **Search Functionality**: Users can search for monsters by typing their names in the search input field.
+- **Data Fetching**: The app fetches monster data from the [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) API using the `fetch` function.
+- **Filtering**: The fetched monster data is filtered based on the search input. The list of monsters displayed is dynamically updated as the user types.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### `App`
 
-### `npm test`
+The main component `App` is responsible for the overall structure of the application. It manages the state for the search input value, the fetched monster data, and the filtered monster list. It also contains two `useEffect` hooks:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. The first `useEffect` hook is responsible for fetching monster data from the API when the component mounts. It sets the fetched data using the `setMonster` function.
 
-### `npm run build`
+2. The second `useEffect` hook is triggered whenever there's a change in the `monster` or `inputValue` state. It filters the `monster` array based on the search input and updates the `monsterFiltered` state accordingly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### `Header`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The **Header** component displays the title and a search input field. It receives the `changeValue` function as a prop, which is used to handle changes in the search input.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### `Card`
 
-### `npm run eject`
+The **Card** component is responsible for rendering the list of monsters. It receives two props: `stateMonster`, which holds the full monster data, and `monsterFiltered`, which holds the filtered monster data based on the search input. It maps through the `monsterFiltered` array and renders individual monster cards.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each monster card includes:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Monster Name**
+- **Monster Illustration**: An image generated using the [RoboHash API](https://robohash.org/) with the `set2` set and a size of 180x180 pixels.
+- **Email**: The email associated with the monster.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install the required dependencies.
+4. Run `npm start` to start the development server.
+5. Open your browser and go to `http://localhost:3000` to see the app in action.
 
-## Learn More
+#### Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React: A JavaScript library for building user interfaces.
+- `useState`: A React hook for managing component state.
+- `useEffect`: A React hook for handling side effects, like data fetching.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Acknowledgments
 
-### Code Splitting
+This project was built for educational purposes and serves as a simple demonstration of React's state management, data fetching capabilities, and integrating external resources like the [RoboHash](https://robohash.org/) API for generating monster illustrations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore the code and modify it according to your needs. Happy coding!
