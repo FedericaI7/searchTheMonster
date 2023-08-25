@@ -6,13 +6,13 @@ export default function App() {
   const [inputValue, setInputValue] = useState("");
   const [monster, setMonster] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((data) => {
         setMonster(data);
       });
-  }, [monster]);
+  }, [monster, inputValue]);
 
   return (
     <div className="container--app">
