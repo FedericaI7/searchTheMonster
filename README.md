@@ -40,7 +40,7 @@ Each monster card includes:
 2. Navigate to the project directory.
 3. Run `npm install` to install the required dependencies.
 4. Run `npm start` to start the development server.
-5. Open your browser and go to `http://localhost:3000` to see the app in action.
+5. Open your browser and go to `https://federicai7.github.io/searchTheMonster/` to see the app in action.
 
 #### Technologies Used
 
