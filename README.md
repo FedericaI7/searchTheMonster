@@ -1,7 +1,7 @@
 ## Project README
 
 ### Monster Search App
-
+(https://federicai7.github.io/searchTheMonster/)
 This project is a React application that allows users to search and filter through a list of monster data fetched from an API. The application consists of two main components: **Header** and **Card**, and it utilizes React's state management and `useEffect` hook for fetching and filtering data.
 
 #### Features
@@ -40,7 +40,7 @@ Each monster card includes:
 2. Navigate to the project directory.
 3. Run `npm install` to install the required dependencies.
 4. Run `npm start` to start the development server.
-5. Open your browser and go to `http://localhost:3000` to see the app in action.
+5. Open your browser and go to (https://localhost:3000) to see the app in action.
 
 #### Technologies Used
 
